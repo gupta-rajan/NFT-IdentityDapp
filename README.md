@@ -43,9 +43,11 @@ Follow these steps to set up and run the full-stack application locally:
 ---
 
 ### 1. Clone the Repository
-git clone repository-url
+git clone https://github.com/gupta-rajan/NFT-IdentityDapp 
 
 cd project-folder
+
+or download the zip file and extract it.
 
 --- 
 
@@ -66,7 +68,7 @@ Copy the private key of the first account — it will be used for contract deplo
 
 ---
 ### 4. Configure Environment Variables
-Create a .env file inside client/src/ and paste your Pinata keys:
+Create a .env file inside client/src/ and paste your Pinata keys as follows(an .env file is already provided with the codes that we used):
 
 REACT_APP_PINATA_API_KEY=21767ebeecdecb816506
 
@@ -116,37 +118,42 @@ AmenityAccess
 It will also generate ABI files in client/src/abi and store addresses in client/src/config.js
 
 ### 8. Start Backend
-app uses an Express backend:
+app uses an Express backend. Run the following commands from the root directory to start it:
 
+npm install
 cd client
 
 npm install
 
-go back to root, then 
-cd backend
+cd ../backend
 
 npm install
 
 npm run dev 
+
 This will run both client and backend/server.js which is used for Pinata IPFS cors.
 
 ### 9. 🦊 MetaMask Integration
-Import a Ganache account into MetaMask.
+Import Ganache accounts into MetaMask.
 Switch to the Localhost 7545 network.
 Refresh the DApp to connect your wallet.
 
 ### 10. Using the DApp
 Mint Identity NFT
-Choose your role (Student/Professor), enter your details, and upload a photo or ID to IPFS.
+With the Admin account(the account that deployed the contracts), you can choose the role (Student/Professor), enter the details, and upload a photo or ID to IPFS as ID proof to mint a new NFT for some user.
 
 Register for Courses
-As a student, use your Identity NFT to register for offered courses.
+As the Admin, you can create new courses.
+As a student, can use your Identity NFT to register for offered courses.
 
 Issue Certificates
-As a professor, select registered students and issue course completion NFTs.
+As the Admin, you can issue certificates to Users.
+As a User, you can view the certificates that were issued to you as NFTs.
 
 Pay Semester Fees
+The Admin can set the semester fee to be paid for that cycle(semester).
 Students can pay fees securely through the DApp.
 
 Access Amenities
-Use the access control module to verify eligibility for amenities and events.
+As the Admin, you can create new Amenities for the Users to access.
+Users can access the Amenities created by the Admin.
