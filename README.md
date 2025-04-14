@@ -63,7 +63,7 @@ cd ..
 ---
 ### 3. Start Ganache (Local Blockchain)
 Start Ganache (GUI or CLI) on port 7545.
-
+npx ganache --port 7545
 Copy the private key of the first account — it will be used for contract deployment.
 
 ---

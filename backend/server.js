@@ -6,7 +6,7 @@ const FormData = require("form-data");
 const axios = require("axios");
 const fs = require("fs");
 const path = require("path");
-const cors = require("cors"); // ✅ CORS imported
+const cors = require("cors"); // CORS imported
 
 const app = express();
 app.use(cors()); 

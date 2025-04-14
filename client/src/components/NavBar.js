@@ -32,6 +32,11 @@ const Navbar = ({ isAdmin }) => {
                   Mint Certificates
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/fee-control">
+                  Fee Control
+                </Link>
+              </li>
             </>
           )}
 

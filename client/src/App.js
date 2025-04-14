@@ -15,6 +15,7 @@ import PayFee from "./components/PayFee";
 import CertificateForm from "./components/CertificateForm";
 import Certificates from "./components/Certificates";
 import AmenityAccess from "./components/AmenityAccess";
+import FeeControl from "./components/FeeControl";
 import { IDENTITYNFT_ABI, IDENTITYNFT_ADDRESS } from "./config";
 
 function App() {
@@ -70,6 +71,7 @@ function App() {
           path="/certificates-form"
           element={isAdmin ? <CertificateForm /> : <Navigate to="/" />}
         />
+        <Route path="/fee-control" element={isAdmin ?<FeeControl/> : <Navigate to="/"/>} />
 
         {/* Public Routes */}
         <Route path="/certificates" element={<Certificates />} />
